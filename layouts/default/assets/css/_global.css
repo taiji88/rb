@@ -1,0 +1,263 @@
+/*!
+ * kimsQ Rb v2.0 기본형 레이아웃 글로벌 스타일
+ * layout Version: 1.0
+ * Homepage: http://www.kimsq.co.kr
+ * Copyright 2014 redblock inc
+ * Licensed under MIT
+ * Based on Bootstrap v3.1.1
+*/
+
+/**
+ * 목차:
+ *
+ * 1 - Reset 초기화
+ * 2 - Structure 구조
+ * 3 - Header 헤더 
+ * 4 - Content 컨텐츠
+ * 5 - Sidebar 사이드바 
+ * 6 - Footer 풋터
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 1 - Reset 초기화
+ * ----------------------------------------------------------------------------
+ */
+
+/*폰트설정*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#rb-body,
+#rb-body h1,
+#rb-body h2,
+#rb-body h3,
+#rb-body h4,
+#rb-body h5,
+#rb-body h6,
+#rb-body input,
+#rb-body select,
+#rb-body textarea  {
+    font-family: "돋움", dotum,'나눔고딕', 'Nanum Gothic', sans-serif, FontAwesome;
+}
+
+@media (max-width: 768px) {
+  #rb-body,
+  #rb-body h1,
+  #rb-body h2,
+  #rb-body h3,
+  #rb-body h4,
+  #rb-body h5,
+  #rb-body h6,
+  #rb-body input,
+  #rb-body select,
+  #rb-body textarea  {
+      font-family: "돋움", dotum, sans-serif, FontAwesome;
+  }
+}
+/**
+ * 2 - Structure 구조 
+ *
+ * 컬럼,여백 사이즈 조정 
+ * ----------------------------------------------------------------------------
+ */
+
+/* bootstrap Container size 와 grid-gutter-width 수정 */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 320px
+}
+@media (min-width: 768px) {
+  .container {
+    width: 740px;  /* padding여백 제외하면 720px */
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1000px; /* padding여백 제외하면 980px */
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px; /* padding여백 제외하면 980px */
+  }
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container > .navbar-header, 
+.container-fluid > .navbar-header, 
+.container > .navbar-collapse, 
+.container-fluid > .navbar-collapse {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.navbar-brand {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.navbar-toggle {
+  margin-right: 10px;
+}
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*컬럼 사이즈 지정*/
+@media (min-width: 992px) {
+  #content-main {
+    width: 780px; /* padding여백 제외하면 760px */
+    left: 200px;
+  }
+  #content-sub {
+    width: 200px; /* padding여백 제외하면 180px */
+    right: 780px
+  }
+}
+
+
+/**
+ * 3 - Header 헤더 
+ * ----------------------------------------------------------------------------
+ */
+
+
+/*토글 레이어*/
+#top .rb-toggle-layer {
+    padding: 0;
+    text-shadow: none;
+}
+@media (min-width: 768px) {
+  #top .rb-toggle-layer {
+      width: 330px;
+  }
+}
+#top .rb-toggle-layer .panel {
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-size: 11px;
+}
+#top .rb-toggle-layer .media {
+    margin-top: 0;
+}
+#top .rb-toggle-layer .list-group {
+    max-height: 450px;
+    overflow: auto;
+}
+#top .rb-toggle-layer .panel-footer a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+#top .rb-toggle-layer .rb-avatar {
+    width: 50px;
+    height: 50px
+}
+#top .rb-toggle-layer .rb-time {
+    color: #999999;
+    font-size: 11px;
+    padding-top: 3px
+}
+#top .rb-toggle-layer .rb-time .fa {
+    font-size: 13px;
+}
+
+/*메시지 레이어*/
+#top .rb-message-layer .media-heading {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120%
+}
+#top .rb-message-layer .media-body {
+    font-size: 11px;
+    color: #777;
+}
+
+/*알림 레이어*/
+@media (min-width: 768px) {
+  #top .rb-notifications-layer {
+      width: 330px;
+  }
+}
+
+/*로그인 레이어*/
+#top .rb-login-layer {
+    padding: 15px;
+    padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+ #top .rb-login-layer {
+    width: 250px;
+  }
+}
+#top .rb-login-layer form {
+    margin-bottom: 15px
+}
+
+
+/**
+ * 4 - Content 컨텐츠
+ * ----------------------------------------------------------------------------
+ */
+
+/*상단 타이틀 영역 */
+.jumbotron {
+  margin-top: -20px; /* navbar 하단마진을 상쇄 , Offset bottom margin on .navbar */
+}
+
+
+/**
+ * 5 - Sidebar 사이드바 
+ * ----------------------------------------------------------------------------
+ */
+
+.rb-sidebar .rb-menu .panel-title ,
+.rb-sidebar .rb-menu .list-group a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.rb-sidebar .rb-menu .list-group > .nav > .active {
+    font-weight: bold;
+}
+.rb-sidebar .rb-menu .list-group-item .branch:after {
+    content: "\f0da";
+    float: right;
+    display: inline-block;
+    min-width: 10px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+}
+.rb-sidebar .rb-menu .list-group-item.active .branch:after {
+    content: "\f0d7";
+}
+
+
+/**
+ * 6 - Footer 풋터
+ * ----------------------------------------------------------------------------
+ */
+.rb-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    border-top: 1px solid #e5e5e5;
+}
+
