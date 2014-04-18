@@ -297,7 +297,7 @@
 						<form role="form">
 							<div class="form-group media">
 								<div class="pull-left">
-									<img src="/rb2/_var/avatar/no-avatar.png" width="50" class="img-rounded img-responsive">
+									<img src="<?php echo $g['s']?>/_var/avatar/no-avatar.png" width="50" class="img-rounded img-responsive">
 								</div>
 								<div class="media-body">
 									<h4 class="media-heading">권기택 (redblock)</h4>
